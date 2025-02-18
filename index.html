@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<!-- banner  -->
+ <div class="banner">
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    <h1>Falah Al-thelabat</h1>
+</div>
+
+<!-- قسم وسائل التواصل الاجتماعي -->
+<div class="social-media">
+    <a href="https://www.facebook.com/share/18grft6KrT/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com/falahaltheiabat?s=21&t=AEOmMGwC4_5MbKB9CTrN3g" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+    <a href="https://www.instagram.com/f_22225?igsh=NmhuZmZsNXkzY3Nw&utm_source=q" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://snapchat.com/t/CyeIyZLZ" target="_blank"><i class="fa-brands fa-square-snapchat"></i></a>
+    <a href="https://t.me/f22_221" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+
+</div>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="./img/1.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/2.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/3.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/4.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/5.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/6.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/7.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+        <div class="col-md-4">
+            <img src="./img/8.jpeg" class="gallery-item" onclick="openModal(this.src)">
+        </div>
+    </div>
+</div>
+
+
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Falah Al-thelabat. All rights reserved.</p>
+        <p>Coded by <a href="https://www.mahfoudh.ru" target="_blank">Mahfoudh Najib</a></p>
+    </div>
+</footer>
+
+
+<!-- نافذة عرض الصور -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

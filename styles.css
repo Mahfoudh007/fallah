@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* banner  */
+
+.banner {
+    background-image: url('./img/banner.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner h1 {
+    color: rgba(255, 255, 255, 0.696);
+    font-weight: bold;
+    z-index: 1;
+    font-size: 4rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.circle-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.757);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.474);
+    animation: float 6s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 40%;
+    animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    top: 30%;
+    left: 70%;
+    animation-delay: 4s;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-50px) scale(1.2);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تصميم النافذة المنبثقة */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: block;
+    margin: 50px auto;
+    width: fit-content !important;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* قسم وسائل التواصل الاجتماعي */
+.social-media {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.social-media a {
+    font-size: 60px;
+    color: #333;
+    margin: 0 10px;
+    transition: all 0.3s linear;
+}
+
+.social-media a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+    display: inline-block;
+}
+
+
+/* footer  */
+
+footer {
+    margin-top: 50px;
+    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    padding: 2rem 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #fdbb2d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(253, 187, 45, 0.8);
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 40%);
+    transform: rotate(30deg);
+    animation: shimmer 10s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: rotate(30deg) translateY(0);
+    }
+    100% {
+        transform: rotate(30deg) translateY(-100px);
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+}
